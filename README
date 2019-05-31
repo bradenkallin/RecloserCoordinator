@@ -1,0 +1,63 @@
+NOTE: Curves which coordinate according to curve data may appear not to 
+        coordinate in CAPE. Reason being that CAPE always plots the first TCC 
+        point at the specified pickup current, while the current in the first 
+        data point in the curve may actually be slightly greater than 1.
+
+----------------
+--folder setup--
+----------------
+for this program to work correctly, folders should be set up as shown below:
+
+
+RecloserCoordinator\
++-- README.txt
++-- recloserCoordinator.exe
+¦
++-- breakerCurves\
+|	+-- LITT1739_TOC
+¦	+-- SANT1151_TOC
+¦	+-- ...
+¦
++-- fuseCurves\
+|	+-- POSI_25k_MM
+¦	+-- POSI_25k_TC
+¦	+-- ...
+¦
++-- recloserCurves\
+|	+-- kyle101
+¦	+-- kyle163
+¦	+-- ...
+
+
+-------------------------
+--breaker query process--
+-------------------------
+1. Attach database in CAPE
+2. Open coordination graphics (CG)
+3. Plot the relevant TOC curve
+4. Right click on curve > List curve points
+5. Copy the text output to notepad. Be sure the first line looks like:
+
+   No. CURRENT(P.AMPS) TIME   (CYCLES)
+
+6. Save the .txt file in the breakerCurves folder
+
+----------------------
+--fuse query process--
+----------------------
+1. Attach database
+2. Open database editor (DB)
+3. Library>Protective Devices>Fuse Library
+4. Select desired fuse > View Data
+5. Select desired fuse designation
+6. "Min. Melt Curve"
+7. Save Points to File
+8. "Total Clear Current"
+9. Save Points to File
+
+------------------------------
+--fuse filename designations--
+------------------------------
+POSI:  S&C Positrol K-speed
+SM-4:  S&C SM-4 Standard speed
+SMU20: S&C SMU-20 Standard speed
