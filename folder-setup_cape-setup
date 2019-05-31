@@ -12,21 +12,21 @@ for this program to work correctly, folders should be set up as shown below:
 RecloserCoordinator\
 +-- README.txt
 +-- recloserCoordinator.exe
-¦
+Â¦
 +-- breakerCurves\
 |	+-- LITT1739_TOC
-¦	+-- SANT1151_TOC
-¦	+-- ...
-¦
+Â¦	+-- SANT1151_TOC
+Â¦	+-- ...
+Â¦
 +-- fuseCurves\
 |	+-- POSI_25k_MM
-¦	+-- POSI_25k_TC
-¦	+-- ...
-¦
+Â¦	+-- POSI_25k_TC
+Â¦	+-- ...
+Â¦
 +-- recloserCurves\
 |	+-- kyle101
-¦	+-- kyle163
-¦	+-- ...
+Â¦	+-- kyle163
+Â¦	+-- ...
 
 
 -------------------------
